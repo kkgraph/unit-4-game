@@ -177,6 +177,16 @@ p {
     background: rgba(0, 120, 163, 0.3);
 }
 
+/*RESULT*/
+.result {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.result > p {
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+}
 /*FOOTER*/
 .footer {
     position: fixed;
