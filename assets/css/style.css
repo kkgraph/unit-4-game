@@ -1,0 +1,195 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("bg.png");
+    background-repeat: repeat;
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+}
+/*HEADER*/
+
+header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-image: linear-gradient(#ffb956, #ff8903);
+    transform: skewY(-4deg);
+    transform-origin: top left;
+    margin-bottom: 20px;
+} 
+
+#logo {
+    position: relative;
+    font-family: 'VT323', monospace;
+    font-size: 66px;
+}
+/*LINKS*/
+/* unvisited link */
+a:link {
+    color:#06CACF;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #8CCE91;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #ffffff;
+    background: #8CCE91
+  }
+  
+  /* selected link */
+  a:active {
+    color: #FF5535;
+  }
+
+/* CONTAINER */
+.container {
+    background-color:rgba(131, 206, 134, 0.7);
+    background-image: -webkit-linear-gradient(30deg,rgba(131, 206, 134, 0.7) 50%, rgba(139, 217, 218, 0.7) 50%);
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+h1 {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 66px;
+    margin: 0;
+    padding: 100px 0;
+    text-align: center;
+}
+
+    header h1 {
+    position: relative;
+    color: white;
+    font-size: 56px;
+    }
+
+h2 {
+    color: #2f7793;
+    font-family: 'VT323', monospace;
+    font-size: 36px;
+    padding: 5px;
+    margin: 5px;
+    border-bottom: 2px dashed #2f7793;
+}
+
+h3 {
+    color: #2f7793;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #2f7793;
+}
+
+p {
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    padding: 4px;
+}
+/*INSTRUCTIONS*/
+.rules {
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+    padding: 10px;
+    background: rgba(255, 255, 255, .85);
+    border-radius: 4px;
+}
+
+/*NUMBER BOARD*/
+.box {
+    margin-left: 105px;
+    margin-top: 20px;
+    width: 35%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, .85);
+    border-radius: 4px;
+    float: left;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+#guess-num {
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#your-num {
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/*SCORE BOARD*/
+.score-board {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, .85);
+    border-radius: 4px;
+}
+/*GEMSTONES*/
+.choices {
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    width: 60%;
+}
+.gem {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+}
+
+.gem:hover {
+    cursor: pointer;
+    background: rgba(0, 120, 163, 0.3);
+}
+
+/*FOOTER*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #388FB2;
+    color: white;
+}
+
+.footer > p {
+    font-family: 'VT323', monospace;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 2px;
+}

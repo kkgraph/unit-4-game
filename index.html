@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>#Crystal</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,700|Oswald:400,700|VT323" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.ico"/>
+
+    <!--jQUERY-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+        <header>
+            <h1 id="logo">#Cyrstal_Game</h1>
+        </header>
+        
+        <div class="container"> <!--DIV FOR CONTAINER START-->
+        
+        <!-- RULES FOR GAME START-->
+        <div class="rules">
+            <h2>Instructions</h2>
+                <p>This is a game that will test your memory. Click a gem and discover what number it contains. Each gem is a different number. Remember the number so you can add it all up to the number automatically generated.</p>
+        </div>
+
+        <!--SCORE BOARD START-->
+        <div class="score-board">
+            <h2>Score Board</h2>
+            <p>WON: <span id="win-counter">0</span></p>
+            <p>LOST: <span id="loss-counter">0</span></p>
+        </div>
+
+        <!--NUMBERS START-->
+        <div class="num-board">
+            <div class="box">
+                <h3>Number to Match:</h3>
+                <span id="guess-num"></span>
+            </div>
+            <div class="box">
+                <h3>Your Total:</h3>
+                <span id="your-num"></span>
+            </div>
+        </div>
+
+        <!--PUZZLE STATE--> 
+        <div class="choices">
+            <div id="r" class="gem">
+                <img src="assets/images/red.png" alt="red gemstone">
+            </div>
+            <div id="p" class="gem">
+                <img src="assets/images/green.png" alt="green gemstone">
+            </div>
+            <div id="s" class="gem">
+                <img src="assets/images/white.png" alt="blue gemstone">
+            </div>
+            <div id="s" class="gem">
+                <img src="assets/images/pink.png" alt="pink gemstone">
+            </div>
+        </div>        
+    </div> <!--DIV for CONTAINER END-->
+        <!--FOOTER-->
+    <div class="footer">
+      <!--credit thingy-->
+        <p>#Crystal <a href="https://github.com/kkgraph">by Graffic Games</a> // 2019</a></p>
+    </div>
+            <!--FOOTER END-->
+        
+        <!--LINK JAVASCRIPT-->
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
