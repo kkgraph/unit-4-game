@@ -1,53 +1,98 @@
 
-//VARIABLES
-  var matchNum = Math.floor(Math.random() * ((120-19)+1) + 19);
+//variables
   var result_p = document.querySelector(".result > p");
-  var win = 0;
-  var loss = 0;
-  var images = ["assets/images/green.png", "assets/images/pink.png", "assets/images/red.png", "assets/images/white.png"];
-  var counter = 0;
+  var wins = 0;
+  var losses = 0;
+  var yourNum = 0;
   var numberOptions = [4, 12, 7, 9]
+  var crystals = 0;
 
-//TARGET NUMBER
-  $("#guess-num").text(matchNum);
+//adding numbers to class
+$("#red").addClass("red");
+$("#green").addClass("green");
+$("#white").addClass("white");
+$("#pink").addClass("pink");
 
-// GEM STONE NUMBERS
-for (var i = 0; i < numberOptions.length; i++) {
-  var imageGem = $("<img>");
-  imageGem.addClass("gem");
-  imageGem.attr("src", images[i]);
-  imageGem.attr("data-gemValue", numberOptions[i]);
-  $(".gems").append(imageGem);
+//so it can start and reset
+function Game(){
+  counter = 0;
+  randomNumber = Math.floor(Math.random() * 101) + 19;
+  $("#guess-num").text(randomNumber);
+  console.log("randomNumber");
+  red = Math.floor(Math.random() * 11) + 1;
+  green = Math.floor(Math.random() * 12) + 1;
+  white = Math.floor(Math.random() * 12) + 1;
+  pink = Math.floor(Math.random() * 12) + 1;
+
 }
 
-// CLICK EVENT TO START GAME
-$(".gem").on("click", function() {
-  var gemValue = ($(this).attr("data-gemValue"));
-  gemValue = parseInt(gemValue);
-  counter += gemValue;
+//starting the game 
+Game();
+//generating number for red
+    $("#red").click(function (){
+        yourNum += red;
+        console.log(yourNum);
+    $("#your-num").html(yourNum);
+            Win();
+            Lost();
+        });
 
-//RESULT COUNTERS
-$("#your-num").text(counter);
+//number for green
+    $("#green").on('click', function (){
+        $("#your-num").html(green+counter);
+        yourNum += green;
+        console.log(yourNum);
+    $("#your-num").html(yourNum);
+        console.log("green");
+        Win();
+        Lost();
+        });
+//white numbers
+    $("#white").on('click', function (){
+        $("#your-num").html(white+counter);
+        yourNum += white;
+        console.log(yourNum);
+    $("#your-num").html(yourNum); 
+    Win();
+    Lost();
+        });
+//pink number
+        $("#pink").on('click', function (){
+          yourNum += pink;
+            console.log(yourNum);
+        $("#your-num").html(yourNum);
+        Win();
+        Lost();
+        });
+    
 
+//restart the game and winning
+    function Win(){
+      if (randomNumber === yourNum){
+         result_p.innerHTML = "🎯 You won! Good job!";
+  
+          wins++;
+          $("#win-counter").html(wins);
+          yourNum = 0;
+          $("#your-num").html(0);
+  
+          Game()
+      }
+  } 
 
-//WIN AND LOSS UPDATE + YOU WON / LOST UPDATE
-    if (counter === matchNum) {
-        result_p.innerHTML = "🎯 You won! Good job!";
-        $("#win-counter").text(win++);
-    }
-
-    else if (counter >= matchNum) {
+  //loss function 
+  function Lost(){
+    if (randomNumber < yourNum){
         result_p.innerHTML = " 👾 Sorry, you lost this round. ";
-        $("#loss-counter").text(loss++);
+        // $("#your-num").html(0);
+
+        losses++;
+        $("#loss-counter").html(losses);
+        yourNum = 0;
+        $("#your-num").html(0);
+
+        Game()
     }
-  });
+  };
 
-// function gameReset() {
-//     myGame.round.guessesLeft = 0;
-//     hasLost(myGame.round.guessesLeft);
 
-//     if (isEndOfRound(myGame.round)) {
-//         myGame = startNewRound(myGame);
-//         myGame.round = setupRound(randomWord(gameWords));
-//     }
-// }
