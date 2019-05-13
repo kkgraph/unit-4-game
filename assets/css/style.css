@@ -160,10 +160,10 @@ p {
     border-radius: 4px;
 }
 /*GEMSTONES*/
-.choices {
+.gems {
     margin: auto;
     margin-bottom: 25px;
-    margin-top: 20px;
+    margin-top: 50px;
     width: 60%;
 }
 .gem {
